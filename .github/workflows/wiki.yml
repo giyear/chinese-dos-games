@@ -1,11 +1,6 @@
 name: Update Wiki
 
 on:
-  push:
-    paths:
-      - 'games.json'
-    branches:
-      - master
   workflow_dispatch:
 
 
