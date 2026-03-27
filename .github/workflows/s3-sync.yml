@@ -2,9 +2,6 @@ name: Sync images to S3
 
 on:
   workflow_dispatch:
-  push:
-    branches:    
-      - master
 
 jobs:
   sync:
@@ -25,4 +22,3 @@ jobs:
           AWS_REGION: ${{ secrets.AWS_REGION }}
           AWS_S3_ENDPOINT: ${{ secrets.AWS_S3_ENDPOINT }}
         run: aws s3 cp img s3://$AWS_S3_BUCKET/ --recursive --endpoint-url "$AWS_S3_ENDPOINT"
-
